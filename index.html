@@ -191,6 +191,60 @@
 
   footer { position: relative; z-index: 1; text-align: center; padding: 2rem 4rem; color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.75rem; border-top: 1px solid var(--border); }
 
+
+  /* ── RESUME ── */
+  .resume-wrapper { }
+  .resume-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .resume-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .resume-icon { font-size: 3rem; flex-shrink: 0; }
+  .resume-text { flex: 1; }
+  .resume-text h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .resume-text p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+  .resume-btn { flex-shrink: 0; }
+
+  /* ── ACHIEVEMENTS ── */
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .achievement-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .achievement-card:hover { border-color: var(--accent3); transform: translateY(-4px); }
+  .achievement-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+  .achievement-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent3), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .achievement-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .achievement-card p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+
+  @media (max-width: 768px) {
+    .resume-card { flex-direction: column; text-align: center; }
+  }
+
   @keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   @keyframes fadeUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   @keyframes widthPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
@@ -308,9 +362,8 @@
   </div>
   <div class="timeline reveal">
     <div class="timeline-item"><div class="timeline-dot"></div><p class="timeline-date">Aug 2023 — Present</p><h3>B.Tech — Computer Science &amp; Engineering</h3><p class="timeline-org">Lovely Professional University, Phagwara, Punjab</p><p class="timeline-detail">CGPA: 6.48 &nbsp;·&nbsp; Focused on full-stack development, machine learning, and data structures.</p></div>
-    <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent2);box-shadow:0 0 12px var(--accent2)"></div><p class="timeline-date">Jun 2025 — Jul 2025</p><h3>DSA using Python</h3><p class="timeline-org">CSE Pathshala · LPU</p><p class="timeline-detail">Built strong foundation in data structures and algorithms. Implemented arrays, linked lists, stacks, queues, and sorting/searching algorithms. Improved problem-solving speed and coding accuracy.</p></div>
     <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent3);box-shadow:0 0 12px var(--accent3)"></div><p class="timeline-date">Apr 2022 — Mar 2023</p><h3>12th Standard — 60.8%</h3><p class="timeline-org">K. N. Sr. Sec. School, Ch. Dadri, Haryana</p></div>
-    <div class="timeline-item"><div class="timeline-dot"></div><p class="timeline-date">Apr 2020 — Mar 2021</p><h3>10th Standard — CGPA 10 / 10</h3><p class="timeline-org">Base Model School, Ch. Dadri, Haryana</p></div>
+    <div class="timeline-item"><div class="timeline-dot"></div><p class="timeline-date">Apr 2020 — Mar 2021</p><h3>10th Standard — 78%</h3><p class="timeline-org">Base Model School, Ch. Dadri, Haryana</p></div>
   </div>
 </section>
 
@@ -327,9 +380,43 @@
 </section>
 
 <div class="section-divider"></div>
+<section id="resume">
+  <div class="reveal">
+    <p class="section-label">// 05. Resume</p>
+    <h2 class="section-title">My Resume</h2>
+  </div>
+  <div class="resume-wrapper reveal">
+    <div class="resume-card">
+      <div class="resume-icon">📄</div>
+      <div class="resume-text">
+        <h3>Keshav Gupta — Resume</h3>
+        <p>View or download my full resume including education, skills, projects, and certifications.</p>
+      </div>
+      <a href="https://drive.google.com/your-resume-link" target="_blank" class="btn btn-primary resume-btn">View Resume ↗</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<section id="achievements">
+  <div class="reveal">
+    <p class="section-label">// 06. Achievements</p>
+    <h2 class="section-title">Achievements</h2>
+  </div>
+  <div class="achievements-grid">
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">🏆</div>
+      <div class="achievement-number">100+</div>
+      <h3>DSA Problems Solved</h3>
+      <p>Solved 100+ Data Structures &amp; Algorithms problems across platforms, strengthening problem-solving skills and coding accuracy.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
 <section id="contact">
   <div class="reveal">
-    <p class="section-label">// 05. Reach Out</p>
+    <p class="section-label">// 07. Reach Out</p>
     <h2 class="section-title">Get In Touch</h2>
   </div>
   <div class="contact-wrapper reveal">
@@ -338,7 +425,7 @@
       <p>I'm always open to new opportunities, collaborations, or just a good conversation about tech. Feel free to reach out!</p>
       <div class="contact-items">
         <div class="contact-item"><div class="contact-ico">📞</div><span>+91 9518161714</span></div>
-        <div class="contact-item"><div class="contact-ico">✉️</div><a href="mailto:Keshavgupta9605@gmail.com">Keshavgupta9605@gmail.com</a></div>
+        <div class="contact-item"><div class="contact-ico">✉️</div><a href="/cdn-cgi/l/email-protection#cd86a8bea5acbbaab8bdb9acf4fbfdf88daaa0aca4a1e3aea2a0"><span class="__cf_email__" data-cfemail="733816001b120514060307124a45434633141e121a1f5d101c1e">[email&#160;protected]</span></a></div>
         <div class="contact-item"><div class="contact-ico">📍</div><span>Ch. Dadri, Haryana, India</span></div>
       </div>
     </div>
@@ -348,16 +435,16 @@
         <a href="https://www.linkedin.com/in/keshavgupta96/" target="_blank" class="social-btn">💼 LinkedIn</a>
         <a href="https://github.com/keshavgupta9605/" target="_blank" class="social-btn">⚡ GitHub</a>
       </div>
-      <a href="mailto:Keshavgupta9605@gmail.com" class="btn btn-primary" style="margin-top:0.5rem">Send Email →</a>
+      <a href="/cdn-cgi/l/email-protection#eea58b9d868f98899b9e9a8fd7d8dedbae89838f8782c08d8183" class="btn btn-primary" style="margin-top:0.5rem">Send Email →</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>Designed &amp; built for Keshav Gupta &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">keshavgupta9605@gmail.com</span></p>
+  <p>Designed &amp; built for Keshav Gupta &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; <span style="color:var(--accent)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e454b5d464f58495b5e5a4f17181e1b6e49434f4742004d4143">[email&#160;protected]</a></span></p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -366,13 +453,4 @@
   animRing();
   document.querySelectorAll('a,button').forEach(el => {
     el.addEventListener('mouseenter', () => { ring.style.width='54px'; ring.style.height='54px'; ring.style.borderColor='rgba(124,58,237,0.6)'; });
-    el.addEventListener('mouseleave', () => { ring.style.width='36px'; ring.style.height='36px'; ring.style.borderColor='rgba(6,182,212,0.4)'; });
-  });
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); } });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+    el.addEventListener('mouseleave', () => { ring.style
